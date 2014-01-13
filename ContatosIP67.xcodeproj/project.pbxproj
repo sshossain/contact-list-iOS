@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EB1A08F188453480050F274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A08E188453480050F274 /* UIKit.framework */; };
+		7EB1A091188453480050F274 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A090188453480050F274 /* Foundation.framework */; };
+		7EB1A093188453480050F274 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A092188453480050F274 /* CoreGraphics.framework */; };
+		7EB1A099188453480050F274 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EB1A097188453480050F274 /* InfoPlist.strings */; };
+		7EB1A09B188453480050F274 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1A09A188453480050F274 /* main.m */; };
+		7EB1A09F188453480050F274 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1A09E188453480050F274 /* AppDelegate.m */; };
+		7EB1A0A1188453480050F274 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB1A0A0188453480050F274 /* Default.png */; };
+		7EB1A0A3188453480050F274 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB1A0A2188453480050F274 /* Default@2x.png */; };
+		7EB1A0A5188453480050F274 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB1A0A4188453480050F274 /* Default-568h@2x.png */; };
+		7EB1A0AD188453490050F274 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A0AC188453490050F274 /* SenTestingKit.framework */; };
+		7EB1A0AE188453490050F274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A08E188453480050F274 /* UIKit.framework */; };
+		7EB1A0AF188453490050F274 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A090188453480050F274 /* Foundation.framework */; };
+		7EB1A0B7188453490050F274 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EB1A0B5188453490050F274 /* InfoPlist.strings */; };
+		7EB1A0BA188453490050F274 /* ContatosIP67Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1A0B9188453490050F274 /* ContatosIP67Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EB1A0B0188453490050F274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EB1A083188453480050F274 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EB1A08A188453480050F274;
+			remoteInfo = ContatosIP67;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EB1A08B188453480050F274 /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB1A08E188453480050F274 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7EB1A090188453480050F274 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EB1A092188453480050F274 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7EB1A096188453480050F274 /* ContatosIP67-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContatosIP67-Info.plist"; sourceTree = "<group>"; };
+		7EB1A098188453480050F274 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EB1A09A188453480050F274 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EB1A09C188453480050F274 /* ContatosIP67-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContatosIP67-Prefix.pch"; sourceTree = "<group>"; };
+		7EB1A09D188453480050F274 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7EB1A09E188453480050F274 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7EB1A0A0188453480050F274 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7EB1A0A2188453480050F274 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7EB1A0A4188453480050F274 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7EB1A0AB188453490050F274 /* ContatosIP67Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContatosIP67Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB1A0AC188453490050F274 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7EB1A0B4188453490050F274 /* ContatosIP67Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContatosIP67Tests-Info.plist"; sourceTree = "<group>"; };
+		7EB1A0B6188453490050F274 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EB1A0B8188453490050F274 /* ContatosIP67Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContatosIP67Tests.h; sourceTree = "<group>"; };
+		7EB1A0B9188453490050F274 /* ContatosIP67Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContatosIP67Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EB1A088188453480050F274 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB1A08F188453480050F274 /* UIKit.framework in Frameworks */,
+				7EB1A091188453480050F274 /* Foundation.framework in Frameworks */,
+				7EB1A093188453480050F274 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB1A0A7188453490050F274 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB1A0AD188453490050F274 /* SenTestingKit.framework in Frameworks */,
+				7EB1A0AE188453490050F274 /* UIKit.framework in Frameworks */,
+				7EB1A0AF188453490050F274 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EB1A082188453480050F274 = {
+			isa = PBXGroup;
+			children = (
+				7EB1A094188453480050F274 /* ContatosIP67 */,
+				7EB1A0B2188453490050F274 /* ContatosIP67Tests */,
+				7EB1A08D188453480050F274 /* Frameworks */,
+				7EB1A08C188453480050F274 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EB1A08C188453480050F274 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EB1A08B188453480050F274 /* ContatosIP67.app */,
+				7EB1A0AB188453490050F274 /* ContatosIP67Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EB1A08D188453480050F274 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EB1A08E188453480050F274 /* UIKit.framework */,
+				7EB1A090188453480050F274 /* Foundation.framework */,
+				7EB1A092188453480050F274 /* CoreGraphics.framework */,
+				7EB1A0AC188453490050F274 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EB1A094188453480050F274 /* ContatosIP67 */ = {
+			isa = PBXGroup;
+			children = (
+				7EB1A09D188453480050F274 /* AppDelegate.h */,
+				7EB1A09E188453480050F274 /* AppDelegate.m */,
+				7EB1A095188453480050F274 /* Supporting Files */,
+			);
+			path = ContatosIP67;
+			sourceTree = "<group>";
+		};
+		7EB1A095188453480050F274 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EB1A096188453480050F274 /* ContatosIP67-Info.plist */,
+				7EB1A097188453480050F274 /* InfoPlist.strings */,
+				7EB1A09A188453480050F274 /* main.m */,
+				7EB1A09C188453480050F274 /* ContatosIP67-Prefix.pch */,
+				7EB1A0A0188453480050F274 /* Default.png */,
+				7EB1A0A2188453480050F274 /* Default@2x.png */,
+				7EB1A0A4188453480050F274 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EB1A0B2188453490050F274 /* ContatosIP67Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7EB1A0B8188453490050F274 /* ContatosIP67Tests.h */,
+				7EB1A0B9188453490050F274 /* ContatosIP67Tests.m */,
+				7EB1A0B3188453490050F274 /* Supporting Files */,
+			);
+			path = ContatosIP67Tests;
+			sourceTree = "<group>";
+		};
+		7EB1A0B3188453490050F274 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EB1A0B4188453490050F274 /* ContatosIP67Tests-Info.plist */,
+				7EB1A0B5188453490050F274 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EB1A08A188453480050F274 /* ContatosIP67 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB1A0BD188453490050F274 /* Build configuration list for PBXNativeTarget "ContatosIP67" */;
+			buildPhases = (
+				7EB1A087188453480050F274 /* Sources */,
+				7EB1A088188453480050F274 /* Frameworks */,
+				7EB1A089188453480050F274 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContatosIP67;
+			productName = ContatosIP67;
+			productReference = 7EB1A08B188453480050F274 /* ContatosIP67.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7EB1A0AA188453490050F274 /* ContatosIP67Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB1A0C0188453490050F274 /* Build configuration list for PBXNativeTarget "ContatosIP67Tests" */;
+			buildPhases = (
+				7EB1A0A6188453490050F274 /* Sources */,
+				7EB1A0A7188453490050F274 /* Frameworks */,
+				7EB1A0A8188453490050F274 /* Resources */,
+				7EB1A0A9188453490050F274 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EB1A0B1188453490050F274 /* PBXTargetDependency */,
+			);
+			name = ContatosIP67Tests;
+			productName = ContatosIP67Tests;
+			productReference = 7EB1A0AB188453490050F274 /* ContatosIP67Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EB1A083188453480050F274 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ios4212;
+			};
+			buildConfigurationList = 7EB1A086188453480050F274 /* Build configuration list for PBXProject "ContatosIP67" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EB1A082188453480050F274;
+			productRefGroup = 7EB1A08C188453480050F274 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EB1A08A188453480050F274 /* ContatosIP67 */,
+				7EB1A0AA188453490050F274 /* ContatosIP67Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EB1A089188453480050F274 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB1A099188453480050F274 /* InfoPlist.strings in Resources */,
+				7EB1A0A1188453480050F274 /* Default.png in Resources */,
+				7EB1A0A3188453480050F274 /* Default@2x.png in Resources */,
+				7EB1A0A5188453480050F274 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB1A0A8188453490050F274 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB1A0B7188453490050F274 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EB1A0A9188453490050F274 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EB1A087188453480050F274 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB1A09B188453480050F274 /* main.m in Sources */,
+				7EB1A09F188453480050F274 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB1A0A6188453490050F274 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB1A0BA188453490050F274 /* ContatosIP67Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EB1A0B1188453490050F274 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EB1A08A188453480050F274 /* ContatosIP67 */;
+			targetProxy = 7EB1A0B0188453490050F274 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EB1A097188453480050F274 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EB1A098188453480050F274 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7EB1A0B5188453490050F274 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EB1A0B6188453490050F274 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EB1A0BB188453490050F274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EB1A0BC188453490050F274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EB1A0BE188453490050F274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContatosIP67/ContatosIP67-Prefix.pch";
+				INFOPLIST_FILE = "ContatosIP67/ContatosIP67-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7EB1A0BF188453490050F274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContatosIP67/ContatosIP67-Prefix.pch";
+				INFOPLIST_FILE = "ContatosIP67/ContatosIP67-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7EB1A0C1188453490050F274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ContatosIP67.app/ContatosIP67";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContatosIP67/ContatosIP67-Prefix.pch";
+				INFOPLIST_FILE = "ContatosIP67Tests/ContatosIP67Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7EB1A0C2188453490050F274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ContatosIP67.app/ContatosIP67";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContatosIP67/ContatosIP67-Prefix.pch";
+				INFOPLIST_FILE = "ContatosIP67Tests/ContatosIP67Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EB1A086188453480050F274 /* Build configuration list for PBXProject "ContatosIP67" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB1A0BB188453490050F274 /* Debug */,
+				7EB1A0BC188453490050F274 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EB1A0BD188453490050F274 /* Build configuration list for PBXNativeTarget "ContatosIP67" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB1A0BE188453490050F274 /* Debug */,
+				7EB1A0BF188453490050F274 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EB1A0C0188453490050F274 /* Build configuration list for PBXNativeTarget "ContatosIP67Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB1A0C1188453490050F274 /* Debug */,
+				7EB1A0C2188453490050F274 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EB1A083188453480050F274 /* Project object */;
+}
