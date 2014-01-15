@@ -15,5 +15,6 @@
 @property (strong, atomic) NSString * email;
 @property (strong, atomic) NSString * endereco;
 @property (strong, atomic) NSString * site;
+@property (strong, atomic) UIImage * foto;
 
 @end

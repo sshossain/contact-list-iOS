@@ -46,6 +46,7 @@
         self.email.text = self.contato.email;
         self.endereco.text = self.contato.endereco;
         self.site.text = self.contato.site;
+        [self.foto setImage:self.contato.foto forState:UIControlStateNormal];
     }
 }
 
@@ -75,7 +76,7 @@
 
 - (void)alteraContato
 {
-    //Contato * contato = [self pegaDadosDoFormulario];
+    [self pegaDadosDoFormulario];
     if ([self.delegate respondsToSelector:@selector(contatoAlterado:)]) {
         [self.delegate contatoAlterado: self.contato];        
     }
@@ -94,6 +95,7 @@
     self.contato.email = self.email.text;
     self.contato.endereco = self.endereco.text;
     self.contato.site = self.site.text;
+    self.contato.foto = self.foto.imageView.image;
     
     [self.view endEditing:YES];
     
@@ -109,6 +111,26 @@
     } else {
         [self.site resignFirstResponder];
     }
+}
+
+- (IBAction)selecionaFoto:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+    } else {
+        UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; //pode mudar para o source ser a camera
+        picker.allowsEditing = YES;
+        picker.delegate = self;
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage * img = info[UIImagePickerControllerEditedImage];
+    [self.foto setImage:img forState: UIControlStateNormal];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

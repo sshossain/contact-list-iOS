@@ -8,12 +8,13 @@
 
 #import "AppDelegate.h"
 #import "ListaContatosViewController.h"
+#import "ContatosNoMapaViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray * dirs = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSArray * dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * docDir = dirs[0];
     self.nomeArquivo = [NSString stringWithFormat:@"%@/Contatos", docDir];
     
@@ -31,9 +32,15 @@
     
     ListaContatosViewController * lista = [[ListaContatosViewController alloc] init];
     lista.contatos = self.contatos;
+    
+    ContatosNoMapaViewController * mapa = [[ContatosNoMapaViewController alloc] init];
+    UINavigationController * navMapa = [[UINavigationController alloc] initWithRootViewController:mapa];
+    UITabBarController * tabs = [[UITabBarController alloc] init];
     UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:lista];
     
-    self.window.rootViewController = nav;
+    tabs.viewControllers=@[nav,navMapa];
+    
+    self.window.rootViewController = tabs;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -48,6 +55,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    NSLog(@"Contatos gravados: %@", self.contatos);
     [NSKeyedArchiver archiveRootObject:self.contatos toFile:self.nomeArquivo];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.

@@ -11,7 +11,7 @@
 #import "ListaContatosViewController.h"
 #import "FormularioContatoViewControllerDelegate.h"
 
-@interface FormularioContatoViewController : UIViewController
+@interface FormularioContatoViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 @property (weak, nonatomic) IBOutlet UITextField *telefone;
@@ -20,11 +20,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *site;
 
 @property (weak, atomic) NSMutableArray * contatos;
-
 @property (strong, atomic) Contato * contato;
-
 @property (weak, atomic) id <FormularioContatoViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIButton *foto;
 
 - (id)initWithContato: (Contato *)contato;
+- (IBAction)selecionaFoto:(id)sender;
+
 
 @end

@@ -51,7 +51,7 @@
         NSIndexPath * indexPath = [self.tableView indexPathForRowAtPoint:ponto];
         
         Contato * contatoSelecionado = self.contatos[indexPath.row];
-        NSLog(@"Contato selecionado: %@", contatoSelecionado);
+        NSLog(@"Contato selecionado: %@", contatoSelecionado.nome);
         
         UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:contatoSelecionado.nome delegate:self cancelButtonTitle:@"Cancelar" destructiveButtonTitle:nil otherButtonTitles:@"Ligar", @"Enviar E-mail", @"Visualizar Site", @"Exibir Mapa", nil];
         [actionSheet showInView: self.view];
