@@ -44,6 +44,97 @@
     
 }
 
+- (void) exibeMaisAcoes:(UIGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint ponto = [gesture locationInView:self.tableView];
+        NSIndexPath * indexPath = [self.tableView indexPathForRowAtPoint:ponto];
+        
+        Contato * contatoSelecionado = self.contatos[indexPath.row];
+        NSLog(@"Contato selecionado: %@", contatoSelecionado);
+        
+        UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:contatoSelecionado.nome delegate:self cancelButtonTitle:@"Cancelar" destructiveButtonTitle:nil otherButtonTitles:@"Ligar", @"Enviar E-mail", @"Visualizar Site", @"Exibir Mapa", nil];
+        [actionSheet showInView: self.view];
+    }
+}
+
+
+#pragma mark - ActionSheet
+
+- (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self ligar];
+            break;
+        case 1:
+            [self enviarEmail];
+            break;
+        case 2:
+            [self visualizarSite];
+            break;
+        case 3:
+            [self exibirMapa];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void) abrirAplicativoComURL:(NSString *)urlStr
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
+}
+
+- (void) ligar
+{
+    UIDevice * device = [UIDevice currentDevice];
+    if ([device.model isEqualToString:@"iPhone"]) {
+        NSString * urlStr = [NSString stringWithFormat:@"tel:%@", contatoSelecionado.telefone];
+        [self abrirAplicativoComURL: urlStr];
+    }
+    else {
+        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Duh!" message:@"Compre um iPhone..." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (void) visualizarSite
+{
+    [self abrirAplicativoComURL:contatoSelecionado.site]; //precisa ter http:// na string do site
+}
+
+- (void) exibirMapa
+{
+    NSString * urlStr = [[NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", contatoSelecionado.endereco] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [self abrirAplicativoComURL: urlStr];
+}
+
+- (void) enviarEmail
+{
+    if ([MFMailComposeViewController canSendMail]) {
+        
+        MFMailComposeViewController * mail = [[MFMailComposeViewController alloc] init];
+        [mail setToRecipients:@[contatoSelecionado.email]];
+        [mail setSubject:@"Contatos IP-67"];
+        mail.mailComposeDelegate = self;
+        [self presentViewController:mail animated:YES completion:nil];
+    
+    }
+    else {
+        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Duh!" message:@"Configure sua conta de e-mail neste dispositivo." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)erro
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - View
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -61,6 +152,13 @@
         [self limpaSelecao];
     }
 
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UILongPressGestureRecognizer * gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(exibeMaisAcoes:)];
+    [self.tableView addGestureRecognizer:gesture];
 }
 
 

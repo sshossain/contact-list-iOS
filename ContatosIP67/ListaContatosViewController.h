@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MessageUI.h>
 #import "FormularioContatoViewController.h"
 #import "FormularioContatoViewControllerDelegate.h"
 
-@interface ListaContatosViewController : UITableViewController <FormularioContatoViewControllerDelegate>
+@interface ListaContatosViewController : UITableViewController <FormularioContatoViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+{
+    Contato * contatoSelecionado;
+}
 
 @property (weak, atomic) NSMutableArray * contatos;
 
