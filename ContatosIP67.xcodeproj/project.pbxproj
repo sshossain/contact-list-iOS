@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0312DB18856BF2006BC355 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0312DA18856BF2006BC355 /* ListaContatosViewController.m */; };
 		7EB1A08F188453480050F274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A08E188453480050F274 /* UIKit.framework */; };
 		7EB1A091188453480050F274 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A090188453480050F274 /* Foundation.framework */; };
 		7EB1A093188453480050F274 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A092188453480050F274 /* CoreGraphics.framework */; };
@@ -21,6 +22,9 @@
 		7EB1A0AF188453490050F274 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB1A090188453480050F274 /* Foundation.framework */; };
 		7EB1A0B7188453490050F274 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EB1A0B5188453490050F274 /* InfoPlist.strings */; };
 		7EB1A0BA188453490050F274 /* ContatosIP67Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1A0B9188453490050F274 /* ContatosIP67Tests.m */; };
+		7EB1A0C6188456FF0050F274 /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1A0C4188456FF0050F274 /* FormularioContatoViewController.m */; };
+		7EB1A0C7188456FF0050F274 /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB1A0C5188456FF0050F274 /* FormularioContatoViewController.xib */; };
+		7EB1A0CA18846A740050F274 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB1A0C918846A740050F274 /* Contato.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039D15B91886AE2F00AA384E /* FormularioContatoViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FormularioContatoViewControllerDelegate.h; path = ../FormularioContatoViewControllerDelegate.h; sourceTree = "<group>"; };
+		7E0312D918856BF2006BC355 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
+		7E0312DA18856BF2006BC355 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 		7EB1A08B188453480050F274 /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB1A08E188453480050F274 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EB1A090188453480050F274 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +60,11 @@
 		7EB1A0B6188453490050F274 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7EB1A0B8188453490050F274 /* ContatosIP67Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContatosIP67Tests.h; sourceTree = "<group>"; };
 		7EB1A0B9188453490050F274 /* ContatosIP67Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContatosIP67Tests.m; sourceTree = "<group>"; };
+		7EB1A0C3188456FF0050F274 /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
+		7EB1A0C4188456FF0050F274 /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
+		7EB1A0C5188456FF0050F274 /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
+		7EB1A0C818846A740050F274 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
+		7EB1A0C918846A740050F274 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +126,14 @@
 			children = (
 				7EB1A09D188453480050F274 /* AppDelegate.h */,
 				7EB1A09E188453480050F274 /* AppDelegate.m */,
+				7EB1A0C3188456FF0050F274 /* FormularioContatoViewController.h */,
+				7EB1A0C4188456FF0050F274 /* FormularioContatoViewController.m */,
+				7EB1A0C5188456FF0050F274 /* FormularioContatoViewController.xib */,
+				7E0312D918856BF2006BC355 /* ListaContatosViewController.h */,
+				7E0312DA18856BF2006BC355 /* ListaContatosViewController.m */,
+				7EB1A0C818846A740050F274 /* Contato.h */,
+				7EB1A0C918846A740050F274 /* Contato.m */,
+				039D15B91886AE2F00AA384E /* FormularioContatoViewControllerDelegate.h */,
 				7EB1A095188453480050F274 /* Supporting Files */,
 			);
 			path = ContatosIP67;
@@ -227,6 +247,7 @@
 				7EB1A0A1188453480050F274 /* Default.png in Resources */,
 				7EB1A0A3188453480050F274 /* Default@2x.png in Resources */,
 				7EB1A0A5188453480050F274 /* Default-568h@2x.png in Resources */,
+				7EB1A0C7188456FF0050F274 /* FormularioContatoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +284,9 @@
 			files = (
 				7EB1A09B188453480050F274 /* main.m in Sources */,
 				7EB1A09F188453480050F274 /* AppDelegate.m in Sources */,
+				7EB1A0C6188456FF0050F274 /* FormularioContatoViewController.m in Sources */,
+				7EB1A0CA18846A740050F274 /* Contato.m in Sources */,
+				7E0312DB18856BF2006BC355 /* ListaContatosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +459,7 @@
 				7EB1A0BF188453490050F274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EB1A0C0188453490050F274 /* Build configuration list for PBXNativeTarget "ContatosIP67Tests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +468,7 @@
 				7EB1A0C2188453490050F274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

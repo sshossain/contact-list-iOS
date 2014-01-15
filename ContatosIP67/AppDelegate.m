@@ -7,13 +7,34 @@
 //
 
 #import "AppDelegate.h"
+#import "ListaContatosViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSArray * dirs = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSString * docDir = dirs[0];
+    self.nomeArquivo = [NSString stringWithFormat:@"%@/Contatos", docDir];
+    
+    self.contatos = [NSKeyedUnarchiver unarchiveObjectWithFile:self.nomeArquivo];
+    if (!self.contatos) {
+        self.contatos = [[NSMutableArray alloc]init];        
+    }
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    /*
+    tirando o formulario pra inicializar como lista
+     FormularioContatoViewController * form = [[FormularioContatoViewController alloc] init];
+    self.window.rootViewController = form;*/
+    
+    ListaContatosViewController * lista = [[ListaContatosViewController alloc] init];
+    lista.contatos = self.contatos;
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:lista];
+    
+    self.window.rootViewController = nav;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -27,7 +48,8 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    [NSKeyedArchiver archiveRootObject:self.contatos toFile:self.nomeArquivo];
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
