@@ -55,11 +55,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (id)initWithContato: (Contato *)contato
+{
+    self = [super init];
+    if (self) {
+        self.contato = contato;
+        self.navigationItem.title = @"Alteração";
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Altera" style:UIBarButtonItemStylePlain target:self action: @selector(alteraContato)];
+    }
+    return self;
+}
+
 - (void)criaContato
 {
-    Contato* contato = [self pegaDadosDoFormulario];
-    //[self.contatos addObject: contato];
+    Contato * contato = [self pegaDadosDoFormulario];
     [self.delegate contatoAdicionado:contato];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)alteraContato
+{
+    //Contato * contato = [self pegaDadosDoFormulario];
+    if ([self.delegate respondsToSelector:@selector(contatoAlterado:)]) {
+        [self.delegate contatoAlterado: self.contato];        
+    }
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -68,7 +88,7 @@
     if (!self.contato) {
         self.contato = [[Contato alloc] init];
     }
-
+    
     self.contato.nome = self.nome.text;
     self.contato.telefone = self.telefone.text;
     self.contato.email = self.email.text;
@@ -89,27 +109,6 @@
     } else {
         [self.site resignFirstResponder];
     }
-}
-
-- (id)initWithContato: (Contato *)contato
-{
-    self = [super init];
-    if (self) {
-        self.contato = contato;
-        self.navigationItem.title = @"Alteração";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Altera" style:UIBarButtonItemStylePlain target:self action: @selector(alteraContato)];
-    }
-    return self;
-}
-
-- (void)alteraContato
-{
-    Contato * contato = [self pegaDadosDoFormulario];
-    if ([self.delegate respondsToSelector:@selector(contatoAlterado:)]) {
-        [self.delegate contatoAlterado: self.contato];        
-    }
-
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

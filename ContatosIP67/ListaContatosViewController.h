@@ -14,4 +14,6 @@
 
 @property (weak, atomic) NSMutableArray * contatos;
 
+@property (assign, atomic) NSInteger linhaSelecionada;
+
 @end
